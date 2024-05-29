@@ -12,7 +12,7 @@ const BuyButton = () => {
   const dispatch = useAppDispatch();
   if (bublincart.length !== 0) {
     return (
-      <section className="fixed flex bottom-2 w-1/2">
+      <section className="fixed flex bottom-2 xl:w-1/2 w-full p-2">
         <Link
           href={"/order/buy"}
           className=" text-center mr-2 hover:bg-green-500 hover:text-black bg-gray-800 border-2 rounded-xl w-full border-green-500 p-2"

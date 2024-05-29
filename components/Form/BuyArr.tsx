@@ -9,7 +9,7 @@ const BuyArr = () => {
     (state: RootState) => state.cart.bublincart
   );
   return (
-    <section className=" grid grid-cols-4 gap-2">
+    <section className=" grid xl:grid-cols-4 grid-cols-1 gap-2">
       {bublincart.map((bubl) => (
         <BublComponent bubl={bubl} key={bubl.id} variant="buy" />
       ))}
