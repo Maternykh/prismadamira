@@ -1,10 +1,5 @@
 "use client";
-import {
-  dicrimentProd,
-  incrementProd,
-  pushToCart,
-  removeFromCart,
-} from "@/Redux/slices/CartSlice";
+import { pushToCart, removeFromCart } from "@/Redux/slices/CartSlice";
 import { deletePost } from "@/lib/actions";
 import { BublType, useAppDispatch } from "@/types";
 import Image from "next/image";
@@ -32,10 +27,10 @@ const BublComponent: FC<{ bubl: BublType; variant: string }> = ({
           className=" rounded-xl"
         />
         <h1 className=" text-white text-xl mt-2 mb-2">{bubl.title}</h1>
-        <div className=" flex mb-2">
+        <div className=" flex mb-2 gap-2 flex-wrap">
           {bubl.ingredients.map((ingrid, i) => (
             <p
-              className=" bg-blue-500 rounded-xl px-1 py-[2px] text-black mr-2"
+              className=" bg-blue-500 rounded-xl px-1 py-[2px] text-black"
               key={i}
             >
               {ingrid}
@@ -51,7 +46,7 @@ const BublComponent: FC<{ bubl: BublType; variant: string }> = ({
             {variant === "base" && (
               <button
                 onClick={() => dispatch(pushToCart(bubl))}
-                className=" mr-2 hover:bg-green-500 hover:text-black text-white border-2  justify-center flex hover:cursor-pointer border-green-500 w-52 h-min rounded-xl p-1 mt-3"
+                className=" mr-2 hover:bg-green-500 hover:text-black text-white border-2  justify-center flex hover:cursor-pointer border-green-500 xl:w-52 w-28 h-min rounded-xl p-1 mt-3"
               >
                 Add to Cart
               </button>
@@ -98,7 +93,7 @@ const BublComponent: FC<{ bubl: BublType; variant: string }> = ({
           {bubl.desc}
         </div>
       )}
-      {variant === "buy" && <p>шт: {bubl.count}</p>}
+      {/* {variant === "buy" && <p>шт: {bubl.count}</p>}
       {variant === "incart" && (
         <div className=" mt-2 flex justify-between items-center">
           <div className=" flex py-2 px-3 rounded-xl border-2 border-green-500">
@@ -117,7 +112,7 @@ const BublComponent: FC<{ bubl: BublType; variant: string }> = ({
             </button>
           </div>
         </div>
-      )}
+      )} */}
       {IsOpenPhoto && (
         <article className=" fixed z-10 top-0 left-0 w-screen h-screen bg-black  bg-opacity-60">
           <section className=" w-full h-full flex justify-center items-center">

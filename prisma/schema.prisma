@@ -20,7 +20,6 @@ model Bubl {
   image       String
   cost        String
   ingredients String[]
-  count       String
 }
 
 model Order {

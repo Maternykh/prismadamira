@@ -13,16 +13,7 @@ const Form: FC = () => {
   const BuyBubl = () => {
     const ids: string[] = [];
     bublincart.map((el) => {
-      if (el.count === "1") {
-        ids.push(String(el.id));
-      }
-      if (Number(el.count) > 1) {
-        let index = 0;
-        while (index === Number(el.count)) {
-          ids.push(String(el.id));
-          index++;
-        }
-      }
+      ids.push(String(el.id));
     });
     console.log(ids);
     if (!!telephone && !!adress && !!bublincart) {

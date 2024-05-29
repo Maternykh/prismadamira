@@ -6,7 +6,7 @@ import React from "react";
 const OrderPage = () => {
   return (
     <article className=" flex flex-col items-center pb-8">
-      <CartArr variant="4" />
+      <CartArr />
       <BuyButton />
     </article>
   );

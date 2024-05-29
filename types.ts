@@ -8,7 +8,6 @@ export interface BublType {
   image: string;
   cost: string;
   ingredients: string[];
-  count: string;
 }
 export interface Bubl {
   id: string;
@@ -17,7 +16,6 @@ export interface Bubl {
   image: string;
   cost: string;
   ingredients: string[];
-  count: string;
 }
 export type searchProps = {
   [key: string]: string | undefined;

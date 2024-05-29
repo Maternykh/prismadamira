@@ -23,14 +23,12 @@ export const AddPost = async ({
   image,
   cost,
   ingredients,
-  count,
 }: {
   title: string;
   desc: string;
   image: string;
   cost: string;
   ingredients: string[];
-  count: string;
 }) => {
   try {
     const createPost = await prisma.bubl.create({
@@ -40,7 +38,6 @@ export const AddPost = async ({
         image,
         cost,
         ingredients,
-        count,
       },
     });
     revalidatePath("/");

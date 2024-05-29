@@ -8,7 +8,7 @@ const AllBubl: FC<{ search: string | undefined }> = async ({ search }) => {
     return <section>There is nothing</section>;
   } else
     return (
-      <main className=" p-2 grid grid-cols-4 gap-2">
+      <main className=" p-2 grid xl:grid-cols-4 grid-cols-1 gap-2">
         {bubls?.map((bubl) => (
           <BublComponent bubl={bubl} key={bubl.id} variant="base" />
         ))}
