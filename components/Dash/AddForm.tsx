@@ -21,7 +21,7 @@ const AddForm: FC = () => {
   };
 
   const AddItem = () => {
-    AddPost({ title, desc, image, cost, ingredients, count: "1" });
+    AddPost({ title, desc, image, cost, ingredients });
   };
   return (
     <section className=" mt-2 flex flex-col bg-gray-800 w-min rounded-xl p-2">
