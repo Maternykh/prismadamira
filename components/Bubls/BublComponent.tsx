@@ -16,7 +16,11 @@ const BublComponent: FC<{ bubl: BublType; variant: string }> = ({
   const [IsOpenPhoto, setIsOpenPhoto] = useState<boolean>(false);
   const dispatch = useAppDispatch();
   return (
-    <article className="">
+    <article
+      className={`${
+        variant === "order" ? "border-2 border-green-500 rounded-xl mb-2" : ""
+      }`}
+    >
       <section className="  bg-gray-800 rounded-xl p-2 ">
         <Image
           onClick={() => setIsOpenPhoto(true)}

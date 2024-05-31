@@ -5,7 +5,7 @@ import React from "react";
 
 const OrderPage = () => {
   return (
-    <article className=" flex flex-col items-center pb-8">
+    <article className=" flex flex-col items-center pb-12">
       <CartArr />
       <BuyButton />
     </article>

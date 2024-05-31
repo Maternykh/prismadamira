@@ -1,12 +1,17 @@
 "use client";
+import { clearCart } from "@/Redux/slices/CartSlice";
 import { RootState } from "@/Redux/store";
 import { AddOrder } from "@/lib/actions";
-import { useAppSelector } from "@/types";
+import { useAppDispatch, useAppSelector } from "@/types";
+import { useRouter } from "next/navigation";
+
 import React, { FC, useState } from "react";
 
 const Form: FC = () => {
   const [telephone, setTelephone] = useState<string>("");
   const [adress, setAdress] = useState<string>("");
+  const router = useRouter();
+  const dispatch = useAppDispatch();
   const bublincart = useAppSelector(
     (state: RootState) => state.cart.bublincart
   );
@@ -19,6 +24,8 @@ const Form: FC = () => {
     if (!!telephone && !!adress && !!bublincart) {
       AddOrder({ telephone, adress, items: ids });
     }
+    router.push("/order/buy/succes");
+    dispatch(clearCart());
   };
   return (
     <section className=" flex flex-col mb-2">

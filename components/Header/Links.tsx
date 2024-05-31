@@ -14,7 +14,7 @@ const Links: React.FC = () => {
               link.pathLink === pathname
                 ? "bg-gray-700 text-white"
                 : " bg-gray-900 text-slate-400"
-            } duration-75 xl:hover:-translate-y-1 border-gray-700 mb-2 xl:mb-0 flex border-2 rounded-full p-2 xl:mr-3 mr-1`}
+            } duration-75 xl:hover:-translate-y-1 border-gray-700 mb-2 xl:mb-0 flex border-2 rounded-full p-2 xl:mr-3 mr-1 xl:text-base text-sm`}
           >
             <div>{link.nameLink}</div>
           </div>

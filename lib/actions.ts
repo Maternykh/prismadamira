@@ -107,8 +107,20 @@ export const updatePost = async ({
 };
 export const getOrders = async () => {
   try {
-    const bubls = await prisma.order.findMany({});
-    return bubls;
+    const order = await prisma.order.findMany({});
+    return order;
+  } catch (e) {
+    console.log(e);
+  }
+};
+export const getOrder = async (id: string) => {
+  try {
+    const order = await prisma.order.findUnique({
+      where: {
+        id: id,
+      },
+    });
+    return order;
   } catch (e) {
     console.log(e);
   }

@@ -17,6 +17,12 @@ export interface Bubl {
   cost: string;
   ingredients: string[];
 }
+export interface OrderType {
+  id: string;
+  telephone: string;
+  adress: string;
+  items: string[];
+}
 export type searchProps = {
   [key: string]: string | undefined;
 };
