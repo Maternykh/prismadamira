@@ -148,3 +148,16 @@ export const AddOrder = async ({
     console.log(e);
   }
 };
+export const deleteBubl = async (id: string) => {
+  try {
+    console.log(id);
+    const deletedPost = await prisma.order.delete({
+      where: {
+        id: id,
+      },
+    });
+    console.log("deleted from the database:" + deletedPost);
+  } catch (e) {
+    console.log(e);
+  }
+};
