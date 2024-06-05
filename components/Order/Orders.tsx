@@ -8,7 +8,7 @@ const Orders: FC = async () => {
     return <section>There is nothing</section>;
   } else
     return (
-      <main className=" p-2 grid xl:grid-cols-10 grid-cols-2 gap-2">
+      <main className=" p-2 flex flex-wrap gap-2">
         {orders?.map((order) => (
           <OrderComponent key={order.id} order={order} />
         ))}

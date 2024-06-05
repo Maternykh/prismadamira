@@ -1,6 +1,7 @@
 import { OrderType } from "@/types";
 import Link from "next/link";
 import React, { FC } from "react";
+import { IoIosMore } from "react-icons/io";
 
 const OrderComponent: FC<{ order: OrderType }> = ({ order }) => {
   return (
@@ -9,9 +10,9 @@ const OrderComponent: FC<{ order: OrderType }> = ({ order }) => {
       <p className=" mb-2">{order.adress}</p>
       <Link
         href={"/dashboard/panel/order/" + order.id}
-        className=" bg-green-500 text-black py-2 px-10 rounded-xl"
+        className=" flex justify-center pb-2 items-center border-2 border-green-500 text-green-500  w-10 h-10 rounded-xl text-xl"
       >
-        More
+        ...
       </Link>
     </section>
   );
